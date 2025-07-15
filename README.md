@@ -35,7 +35,35 @@ Estas dimensiones corresponden a torres de enfriamiento de tipo hiperboloide de 
 ---
 ## 🧮 Modelo Matemático
 
+### 🔹 Paso 0: Origen de la curva generatriz
 
+La función de la curva generatriz que usamos para modelar la torre de enfriamiento proviene de una **sección del hiperboloide de una hoja**, una superficie clásica de revolución utilizada en estructuras reales.
+
+La ecuación general tridimensional del hiperboloide es:
+
+$$
+\frac{y^2}{a^2} + \frac{z^2}{b^2} - \frac{x^2}{c^2} = 1
+$$
+
+Asumiendo simetría circular \( a = b \), y cortando el sólido en el plano \( z = 0 \), obtenemos una curva en dos dimensiones:
+
+$$
+\frac{y^2}{a^2} = 1 + \frac{x^2}{c^2}
+$$
+
+Despejando \( y \), se obtiene la función:
+
+$$
+y = a \cdot \sqrt{1 + \frac{x^2}{c^2}}
+$$
+
+Esta expresión representa la **distancia radial** desde el eje. Por lo tanto, se define:
+
+$$
+r(x) = a \cdot \sqrt{1 + \frac{x^2}{c^2}}
+$$
+
+---
 
 ### 🔹 Paso 1: Definir la curva generatriz
 La torre se genera al rotar la siguiente curva en torno al eje **x**:
