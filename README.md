@@ -92,6 +92,79 @@ $$r'(x) = \frac{a \cdot x}{c^2 \cdot \sqrt{1 + \frac{x^2}{c^2}}}
 $$
 
 ### 🔹 Paso 4: Plantear la integral de superficie de revolución
+### 📐 Demostración de la fórmula de Superficie de Revolución
+
+Queremos calcular el área superficial generada al **rotar una curva \( f(x) \)** alrededor del eje **x**, entre los puntos \( x = a \) y \( x = b \).
+
+---
+
+#### 🔹 Idea general
+
+- Imaginamos que la curva \( f(x) \) genera un **sólido de revolución** al girar.
+- Cortamos ese sólido en **discos infinitesimales** de espesor \( dl \).
+- Cada disco tiene:
+  - Radio: \( f(x) \)
+  - Altura (grosor): \( dl \)
+  - Superficie lateral infinitesimal: \( dS \)
+
+---
+
+#### 🔹 Relación con longitud de arco
+
+Para encontrar el área de cada tira (como si fuera un cilindro delgado), usamos la fórmula de **longitud de arco**:
+
+$$
+dl = \sqrt{1 + (f'(x))^2} \, dx
+$$
+
+Esto proviene del diferencial de la longitud de una curva:
+
+$$
+L = \int_a^b \sqrt{1 + (f'(x))^2} \, dx
+$$
+
+---
+
+#### 🔹 Área de una pequeña franja rotada
+
+El área superficial de un pequeño disco al rotar es:
+
+$$
+dS = 2\pi f(x) \cdot dl
+$$
+
+Sustituyendo \( dl \):
+
+$$
+dS = 2\pi f(x) \cdot \sqrt{1 + (f'(x))^2} \, dx
+$$
+
+---
+
+#### 🔹 Fórmula final
+
+Al integrar todos los pequeños elementos entre \( x = a \) y \( x = b \), obtenemos el área total:
+
+$$
+S = \int_a^b 2\pi f(x) \cdot \sqrt{1 + (f'(x))^2} \, dx
+$$
+
+Esta es la **fórmula general para el área superficial** generada por la rotación de una curva \( f(x) \) alrededor del eje **x**.
+
+---
+
+#### 📌 Notas
+
+- Esta fórmula se basa en considerar una aproximación infinitesimal de cada disco como un cilindro delgado.
+- La raíz cuadrada proviene del **teorema de Pitágoras** aplicado al diferencial de arco.
+- Se asume que \( f(x) \) es continua y derivable en el intervalo \( [a, b] \).
+
+---
+
+> ⚠️ Esta demostración es fundamental para comprender cómo se construye matemáticamente una **superficie de revolución**, como la torre de enfriamiento modelada en este proyecto.
+
+
+
 - Fromula
 $$S = 2 \pi \int_{x_1}^{x_2} r(x) \cdot \sqrt{1 + \left(r'(x)\right)^2} \, dx
 $$
